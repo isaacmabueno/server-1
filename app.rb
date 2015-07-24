@@ -15,13 +15,11 @@ get '/api/movie_name1' do
   cross_origin
   fake_movie('Rookie Of The Year', '1989', 'Classic baseball movie with the Chicago Cubs')
 end
-
 get '/api/movie_name2' do
   cross_origin
   fake_movie('Dumb and Dumber', '1989', 'A tale of two friends and their advenute to ASSSSPEN, Colorado')
 end
-
-get 'api/movie_name3'
+get '/api/movie_name3' do
   cross_origin
-  fake_movie('Toy Story', '1999', 'A movie about toys!')
+  fake_movie('Bambi', '1985', 'A sad movie')
 end
