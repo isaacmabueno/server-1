@@ -1,8 +1,8 @@
 require 'bundler'
 Bundler.require
 
-def fake_movie(name, release_year, desription)
-  {:name => name.to_s, :release_year => year.to_s, :description => description.to_s}.to_json
+def fake_movie(name, release_year, description)
+  {:name => name.to_s, :release_year => release_year.to_s, :description => description.to_s}.to_json
 end
 
 # You should create one method (such as fake_movie) that accepts the following
@@ -12,13 +12,16 @@ end
 # server should be hosted on Heroku.
 
 get '/api/movie_name1' do
+  cross_origin
   fake_movie('Rookie Of The Year', '1989', 'Classic baseball movie with the Chicago Cubs')
 end
 
 get '/api/movie_name2' do
+  cross_origin
   fake_movie('Dumb and Dumber', '1989', 'A tale of two friends and their advenute to ASSSSPEN, Colorado')
 end
 
 get 'api/movie_name3'
+  cross_origin
   fake_movie('Toy Story', '1999', 'A movie about toys!')
 end
